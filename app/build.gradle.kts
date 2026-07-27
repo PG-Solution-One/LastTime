@@ -1,9 +1,46 @@
+@file:Suppress("UnstableApiUsage")
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.ktlint)
 }
+
+val initialVersionName = "1.0.0"
+val releaseTag =
+    providers
+        .gradleProperty("releaseTag")
+        .orNull
+        ?.trim()
+        ?.takeIf(String::isNotEmpty)
+val exactGitTag =
+    runCatching {
+        providers
+            .exec {
+                commandLine("git", "describe", "--tags", "--exact-match", "HEAD")
+                isIgnoreExitValue = true
+            }.standardOutput
+            .asText
+            .get()
+            .trim()
+            .takeIf(String::isNotEmpty)
+    }.getOrNull()
+val latestGitTag =
+    exactGitTag
+        ?: runCatching {
+            providers
+                .exec {
+                    commandLine("git", "describe", "--tags", "--abbrev=0", "HEAD")
+                    isIgnoreExitValue = true
+                }.standardOutput
+                .asText
+                .get()
+                .trim()
+                .takeIf(String::isNotEmpty)
+        }.getOrNull()
+val appVersionName = releaseTag ?: exactGitTag ?: "${latestGitTag ?: initialVersionName}-dev"
+val apkVersionName = appVersionName.replace(Regex("[^0-9A-Za-z._-]"), "-")
 
 android {
     namespace = "app.lasttime"
@@ -19,7 +56,7 @@ android {
         minSdk = 26
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0.0"
+        versionName = appVersionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -45,6 +82,14 @@ android {
     lint {
         abortOnError = true
         checkReleaseBuilds = true
+    }
+}
+
+androidComponents {
+    onVariants(selector().all()) { variant ->
+        variant.outputs.forEach { output ->
+            output.outputFileName.set("LastTime-$apkVersionName.apk")
+        }
     }
 }
 
