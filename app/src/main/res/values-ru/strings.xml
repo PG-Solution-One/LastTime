@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">Last Time</string>
+    <string name="notification_channel_name">Напоминания</string>
+    <string name="notification_channel_description">Напоминания о повторении событий</string>
+    <string name="notification_due">Пора повторить — срок %1$s</string>
+
+    <string name="nav_events">События</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="home_title">Когда последний раз?</string>
+    <string name="home_subtitle">Редкие дела под контролем</string>
+    <string name="add_event">Добавить событие</string>
+    <string name="empty_title">Добавьте первое событие</string>
+    <string name="empty_description">Замена масла, визит к стоматологу, фильтры или полив растений</string>
+    <string name="last_time_elapsed">Последний раз — %1$s</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="settings_appearance">Оформление</string>
+    <string name="settings_appearance_description">Выберите комфортный вид</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_language_description">Язык интерфейса приложения</string>
+    <string name="theme_system_short">Система</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="language_system_short">Система</string>
+    <string name="language_russian">Русский</string>
+    <string name="language_english">English</string>
+
+    <string name="event">Событие</string>
+    <string name="new_event">Новое событие</string>
+    <string name="edit_event">Изменить событие</string>
+    <string name="back">Назад</string>
+    <string name="edit">Изменить</string>
+    <string name="delete">Удалить</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="title">Название</string>
+    <string name="category">Категория</string>
+    <string name="last_time">Последний раз</string>
+    <string name="repeat_after">Повторять через</string>
+    <string name="amount">Число</string>
+    <string name="unit">Единица</string>
+    <string name="reminder">Напоминание</string>
+    <string name="reminder_description">Одно уведомление перед сроком</string>
+    <string name="reminder_days">За сколько дней</string>
+    <string name="reminder_time_hint">Уведомление придёт в 09:00</string>
+    <string name="note">Заметка</string>
+    <string name="done">Готово</string>
+    <string name="form_basics">О событии</string>
+    <string name="form_schedule">Расписание</string>
+    <string name="note_hint">Необязательные детали</string>
+
+    <string name="mark_today">Отметить сегодня</string>
+    <string name="add_another_date">Добавить другую дату</string>
+    <string name="history">История</string>
+    <string name="delete_event_title">Удалить событие?</string>
+    <string name="delete_event_description">Карточка и вся история будут удалены без возможности восстановления.</string>
+    <string name="delete_completion_title">Удалить запись?</string>
+    <string name="edit_date">Изменить дату</string>
+    <string name="delete_history_entry">Удалить запись</string>
+    <string name="last_time_date">Последний раз %1$s</string>
+    <string name="interval_value">Интервал: %1$s</string>
+    <string name="notifications_disabled">Уведомления отключены. Нажмите, чтобы открыть настройки.</string>
+
+    <string name="error_interval_amount">Введите интервал от 1 до 999</string>
+    <string name="error_reminder_days_required">Укажите количество дней до напоминания</string>
+    <string name="error_create_event">Не удалось создать событие</string>
+    <string name="error_update_event">Не удалось сохранить изменения</string>
+    <string name="error_delete_event">Не удалось удалить событие</string>
+    <string name="validation_title_required">Введите название</string>
+    <string name="validation_title_too_long">Название не должно быть длиннее 80 символов</string>
+    <string name="validation_note_too_long">Заметка не должна быть длиннее 500 символов</string>
+    <string name="validation_future_date">Дата выполнения не может быть в будущем</string>
+    <string name="validation_reminder_range">Напоминание должно быть в диапазоне от 0 до 365 дней</string>
+    <string name="validation_reminder_interval">Напоминание должно наступать после предыдущего выполнения</string>
+
+    <string name="saved">Сохранено</string>
+    <string name="duplicate_date">Такая дата уже есть в истории</string>
+    <string name="last_completion">Нельзя удалить единственную запись — измените её дату</string>
+    <string name="entry_not_found">Запись не найдена</string>
+    <string name="change_failed">Не удалось сохранить изменение</string>
+
+    <string name="category_car">Автомобиль</string>
+    <string name="category_home">Дом</string>
+    <string name="category_health">Здоровье</string>
+    <string name="category_shopping">Покупки</string>
+    <string name="category_plants">Растения</string>
+    <string name="category_travel">Путешествия</string>
+    <string name="category_social">Общение</string>
+    <string name="category_other">Другое</string>
+
+    <string name="unit_days">дней</string>
+    <string name="unit_weeks">недель</string>
+    <string name="unit_months">месяцев</string>
+    <string name="unit_years">лет</string>
+
+    <string name="elapsed_today">сегодня</string>
+    <string name="elapsed_yesterday">вчера</string>
+    <string name="status_repeat_today">Повторить сегодня</string>
+    <string name="status_repeat_date">Повторить %1$s</string>
+    <string name="status_next_date">Следующий раз %1$s</string>
+
+    <plurals name="elapsed_days">
+        <item quantity="one">%d день назад</item>
+        <item quantity="few">%d дня назад</item>
+        <item quantity="many">%d дней назад</item>
+        <item quantity="other">%d дня назад</item>
+    </plurals>
+    <plurals name="elapsed_weeks">
+        <item quantity="one">%d неделю назад</item>
+        <item quantity="few">%d недели назад</item>
+        <item quantity="many">%d недель назад</item>
+        <item quantity="other">%d недели назад</item>
+    </plurals>
+    <plurals name="elapsed_months">
+        <item quantity="one">%d месяц назад</item>
+        <item quantity="few">%d месяца назад</item>
+        <item quantity="many">%d месяцев назад</item>
+        <item quantity="other">%d месяца назад</item>
+    </plurals>
+    <plurals name="elapsed_years">
+        <item quantity="one">%d год назад</item>
+        <item quantity="few">%d года назад</item>
+        <item quantity="many">%d лет назад</item>
+        <item quantity="other">%d года назад</item>
+    </plurals>
+    <plurals name="status_overdue_days">
+        <item quantity="one">Просрочено на %d день</item>
+        <item quantity="few">Просрочено на %d дня</item>
+        <item quantity="many">Просрочено на %d дней</item>
+        <item quantity="other">Просрочено на %d дня</item>
+    </plurals>
+    <plurals name="interval_days">
+        <item quantity="one">%d день</item>
+        <item quantity="few">%d дня</item>
+        <item quantity="many">%d дней</item>
+        <item quantity="other">%d дня</item>
+    </plurals>
+    <plurals name="interval_weeks">
+        <item quantity="one">%d неделю</item>
+        <item quantity="few">%d недели</item>
+        <item quantity="many">%d недель</item>
+        <item quantity="other">%d недели</item>
+    </plurals>
+    <plurals name="interval_months">
+        <item quantity="one">%d месяц</item>
+        <item quantity="few">%d месяца</item>
+        <item quantity="many">%d месяцев</item>
+        <item quantity="other">%d месяца</item>
+    </plurals>
+    <plurals name="interval_years">
+        <item quantity="one">%d год</item>
+        <item quantity="few">%d года</item>
+        <item quantity="many">%d лет</item>
+        <item quantity="other">%d года</item>
+    </plurals>
+</resources>
